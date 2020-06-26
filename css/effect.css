@@ -1,0 +1,20 @@
+/* CSS Document */
+
+.text-typing
+{
+    width: 40em;
+    color:green;
+    font-size: 80px;
+    font-family: 'Marck Script', cursive;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(1000, end);
+    animation: type 5s steps(1000, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+ 
+@-webkit-keyframes type{
+    from { width: 0; }
+}

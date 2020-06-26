@@ -1,0 +1,19 @@
+body {
+	font-size:14px;
+	padding: 15px 20px;
+}
+.shows {
+	overflow: hidden;
+}
+.shows div {
+	display: none;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	font-size: 40px;
+	float: left;
+	color: #fff;
+	line-height: 100px;
+	background: #949494;
+	margin: 9px;
+}
