@@ -19,7 +19,7 @@
 	  <script src="/__/firebase/7.15.0/firebase-firestore.js"></script>
 	  <script src="/__/firebase/init.js"></script>
 	  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
+		<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 </head>
 <body>
 	<script>function getAllUrlParams(url) {
@@ -140,7 +140,7 @@
 					});
 		}
 
-		Cookies.set("set_site", "true")
+		Cookies.set("set_site", "true", { path:"/" })
 	</script>
 	<div class="block">
 		<h1>Привет!</h1>
@@ -162,7 +162,7 @@
 	<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
 	<script>
-	$.cookie("Set_site", true)
+
 	var block_show = false
 
 	function scrollTracking(){

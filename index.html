@@ -24,7 +24,8 @@
         <div class="content">
 
 			<script>
-				if(Cookies.get('set_site') == "undefined") {
+
+				if(Cookies.get('set_site') == undefined) {
 					$(".content").append('<div class="shows"> <div>Привет</div> <div class="shows3">Давай Начнем знакомство</div> </div> <script> $(".shows div:eq(0)").fadeIn(3000, function(){ $(this).next().fadeIn(3000, arguments.callee); }); $(".shows div:eq(0)").fadeOut(3000, function(){ $(this).next().fadeOut(3000, arguments.callee); });')
 					$(".content").append('<div id="text_START" class="shows2"> <div>Начать!</div> </div>')
 
@@ -36,14 +37,20 @@
 					text_START.style.cursor = 'pointer';
 					text_START.onclick = function() {
 						location="../Starting/?service=TS";
-					} else if(Cookies.get('set_site') == "true") {
-						
 					}
 
 
 					//Выводить экран первоначальной настройки ############
 					//                                        #  Готово! #
 					//										                    ############ 18:23_14.06.2020 >> 12:16_16.06.2020 >> 18:34_26.06.2020
+				} else if (Cookies.get('set_site') == "true") {
+					$(".content").append('<img id="img" src="../..FILES/Not_Photo400x400.png">')
+					$(".content").append('<h1><a href="../TS-Forms/">TS-Forms</a></h1>')
+					var img = document.getElementById('img')
+					img.style.cursor = 'pointer';
+					img.onclick = function() {
+						location="../TS-Forms";
+					}
 				}
 				$(document).keyup(function(e) {
 					if (e.ctrlKey && e.altKey && e.keyCode === 39) {
