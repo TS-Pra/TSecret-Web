@@ -58,6 +58,19 @@
 				}
 				$(document).keyup(function(e) {
 					if (e.ctrlKey && e.altKey && e.keyCode === 39) {
+						db.collection("cities").doc("LA")
+						  .withConverter(cityConverter)
+						  .get().then(function(doc) {
+						    if (doc.exists){
+						      // Convert to City object
+						      city = doc.data();
+						      // Use a City instance method
+						      console.log(city.toString());
+						    } else {
+						      console.log("No such document!")
+						    }}).catch(function(error) {
+						      console.log("Error getting document:", error)
+						    });
 						alert('Консоль ДевСистем');
 					}
 				});
